@@ -31,6 +31,8 @@
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
         }
         .btn {
             background-color: #d71920;
@@ -46,6 +48,18 @@
             background-color: #a8151a;
         }
     </style>
+    <script>
+        function checkCode() {
+            var code = document.getElementById("codeInput").value;
+            var correctCode = "2037"; // הכניסי את 4 הספרות הנכונות כאן
+
+            if (code === correctCode) {
+                window.location.href = "prank.html"; // שולח לדף המתיחה
+            } else {
+                alert("הקוד שגוי! נסה שוב.");
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -54,7 +68,8 @@
         <h2>כניסה לחשבון</h2>
         <input type="text" placeholder="שם משתמש" disabled>
         <input type="password" placeholder="סיסמה" disabled>
-        <button class="btn" onclick="window.location.href='prank.html'">התחבר</button>
+        <input type="text" id="codeInput" placeholder="הזן 4 ספרות אחרונות של הכרטיס" maxlength="4">
+        <button class="btn" onclick="checkCode()">התחבר</button>
     </div>
 
 </body>
