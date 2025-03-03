@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="he">
 <head>
-    <title>התראה דחופה - חשד לפריצה</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בדיקת מערכת</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; padding: 50px; }
-        .hidden { display: none; }
-        .alert-box { border: 2px solid red; padding: 20px; background: #ffe6e6; display: inline-block; }
-    </style>
-    <script>
-        function showPrank() {
-            document.getElementById("alert").style.display = "none";
-            document.getElementById("prank").style.display = "block";
-            new Audio("https://www.myinstants.com/media/sounds/trollolol.mp3").play(); // השמעת סאונד מצחיק
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 50px;
         }
-    </script>
+        .box {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: darkblue;
+        }
+    </style>
 </head>
 <body>
-    <div id="alert" class="alert-box">
-        <h2>⚠️ מערכת האבטחה זיהתה פעילות חשודה!</h2>
-        <p>לחץ על הכפתור למטה כדי לאשר את זהותך.</p>
-        <button onclick="showPrank()">אשר זהות</button>
+
+    <div class="box">
+        <h2>🔍 בדיקת מערכת</h2>
+        <p>אנא המתן בזמן שאנו מוודאים שהמערכת שלך מעודכנת...</p>
+        <button class="button" onclick="goToPrank()">בדוק עכשיו</button>
     </div>
-    
-    <div id="prank" class="hidden">
-        <h1>😂 נפלת בפח!</h1>
-        <p>נראה שמישהו (אני) החליט לעבוד עליך! בתור עונש, אתה חייב לקנות לי שוקולד 🍫.</p>
-        <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="Troll Face">
-    </div>
+
+    <script>
+        function goToPrank() {
+            window.location.href = "prank.html";
+        }
+    </script>
+
 </body>
 </html>
