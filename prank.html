@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>התראה דחופה - חשד לפריצה</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; padding: 50px; }
+        .hidden { display: none; }
+        .alert-box { border: 2px solid red; padding: 20px; background: #ffe6e6; display: inline-block; }
+    </style>
+    <script>
+        function showPrank() {
+            document.getElementById("alert").style.display = "none";
+            document.getElementById("prank").style.display = "block";
+            new Audio("https://www.myinstants.com/media/sounds/trollolol.mp3").play(); // השמעת סאונד מצחיק
+        }
+    </script>
+</head>
+<body>
+    <div id="alert" class="alert-box">
+        <h2>⚠️ מערכת האבטחה זיהתה פעילות חשודה!</h2>
+        <p>לחץ על הכפתור למטה כדי לאשר את זהותך.</p>
+        <button onclick="showPrank()">אשר זהות</button>
+    </div>
+    
+    <div id="prank" class="hidden">
+        <h1>😂 נפלת בפח!</h1>
+        <p>נראה שמישהו (אני) החליט לעבוד עליך! בתור עונש, אתה חייב לקנות לי שוקולד 🍫.</p>
+        <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" alt="Troll Face">
+    </div>
+</body>
+</html>
